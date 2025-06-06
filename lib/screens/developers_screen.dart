@@ -21,29 +21,54 @@ class DevelopersScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 16),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
+                'Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Teknologi Pemrograman Mobile',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
             const SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
+              child: _buildDeveloperCard(
+                'Jovano Dion Manuel',
+                '123220103',
+                'assets/dion.jpg',
+              ),
+            ),
+            const SizedBox(height: 24),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: _buildDeveloperCard(
-                      'Arvidion Havas Oktavian',
-                      '123220067',
-                      'assets/yon.jpeg',
+                  Text(
+                    'Pesan dan Kesan',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: _buildDeveloperCard(
-                      'Jovano Dion Manuel',
-                      '123220103',
-                      'assets/dion.jpg',
-                    ),
+                  SizedBox(height: 12),
+                  Text(
+                    'Kesan:\nMata kuliah Teknologi Pemrograman Mobile memberikan pengalaman yang sangat berharga dalam pengembangan aplikasi mobile. Pembelajaran Flutter membuka wawasan baru tentang bagaimana membuat aplikasi yang dapat berjalan di berbagai platform.',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    'Pesan:\nUntuk teman-teman yang akan mengambil mata kuliah ini, persiapkan diri dengan dasar pemrograman yang kuat dan semangat belajar yang tinggi. Jangan ragu untuk bereksperimen dengan fitur-fitur baru dan selalu aktif mencari solusi dari berbagai sumber.',
+                    style: TextStyle(fontSize: 16),
                   ),
                 ],
               ),
             ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
