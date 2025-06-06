@@ -1,0 +1,3 @@
+ALTER TABLE users
+ADD COLUMN IF NOT EXISTS encrypted_location TEXT,
+ADD COLUMN IF NOT EXISTS location_iv VARCHAR(32); 
